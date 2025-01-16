@@ -5,15 +5,15 @@ spring:
   application:
     name: config-server2
 
-  profile:
-    active: native, git
+  profiles:
+    active: native,git
 
   cloud:
     config:
       server:
         native:
-          search-location: classpath:/configs
+          search-locations: classpath:/configs
         git:
           uri: ${repo.uri}
-          searchPath: ${repo.path}
+          searchPaths: ${repo.path}
           default-label: ${repo.branch}
