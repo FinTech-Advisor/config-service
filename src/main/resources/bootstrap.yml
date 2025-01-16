@@ -1,0 +1,19 @@
+server:
+  port: 3333
+
+spring:
+  application:
+    name: config-server2
+
+  profile:
+    active: native, git
+
+  cloud:
+    config:
+      server:
+        native:
+          search-location: classpath:/configs
+        git:
+          uri: ${repo.uri}
+          searchPath: ${repo.path}
+          default-label: ${repo.branch}
