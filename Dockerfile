@@ -6,4 +6,4 @@ ENV REPO_BRANCH=master
 
 ENTRYPOINT ["java", "-Drepo.uri=${REPO_URI}", "-Drepo.path=${REPO_PATH}", "-Drepo.branch=${REPO_BRANCH}", "-jar", "app.jar"]
 
-EXPOSE 3333
+EXPOSE 3338
